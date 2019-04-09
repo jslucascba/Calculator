@@ -35,133 +35,118 @@ public class MainForm {
         frame.setVisible(true);
     }
 
+    public void numberAction(String amount){
+        if(txtResult.getText().equals("0")){
+            txtResult.setText("");
+        }
+        txtResult.setText(txtResult.getText() + amount);
+    }
+
+    public void operandAction(String tempOperand){
+        myValue = Double.parseDouble(txtResult.getText());
+        operand = tempOperand;
+        lblResult.setText(txtResult.getText() + " " + operand);
+        txtResult.setText("0");
+    }
     public MainForm() {
 
 
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn1.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn2.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn3.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn4.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn5.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn6.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn7.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn8.getText());
+                numberAction(e.getActionCommand());
             }
         });
+
         btn9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn9.getText());
+                numberAction(e.getActionCommand());
             }
         });
         btn0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(txtResult.getText().equals("0")){
-                    txtResult.setText("");
-                }
-                txtResult.setText(txtResult.getText() + btn0.getText());
+                numberAction(e.getActionCommand());
+            }
+        });
+        btnDec.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numberAction(e.getActionCommand());
             }
         });
         btnPlus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myValue = Double.parseDouble(txtResult.getText());
-                operand = "+";
-                lblResult.setText(txtResult.getText() + " " + operand);
-                txtResult.setText("0");
+                operandAction(e.getActionCommand());
             }
         });
         btnMinus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myValue = Double.parseDouble(txtResult.getText());
-                operand = "-";
-                lblResult.setText(txtResult.getText() + " " + operand);
-                txtResult.setText("0");
+                operandAction(e.getActionCommand());
             }
         });
         btnMultiply.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myValue = Double.parseDouble(txtResult.getText());
-                operand = "x";
-                lblResult.setText(txtResult.getText() + " " + operand);
-                txtResult.setText("0");
+                operandAction(e.getActionCommand());
             }
         });
         btnDivide.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myValue = Double.parseDouble(txtResult.getText());
-                operand = "/";
-                lblResult.setText(txtResult.getText() + " " + operand);
-                txtResult.setText("0");
+                operandAction(e.getActionCommand());
             }
         });
 
